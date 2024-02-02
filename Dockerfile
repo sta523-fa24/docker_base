@@ -12,4 +12,5 @@ RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/qua
 RUN apt-get update \
  && apt-get install -y pandoc libmagick++-dev
 
+
 CMD ["bash"]
