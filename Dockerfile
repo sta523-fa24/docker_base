@@ -3,7 +3,7 @@ FROM rocker/r-ubuntu:22.04
 ADD Rprofile.site /usr/lib/R/etc/Rprofile.site
 
 RUN install.r devtools rmarkdown tidyverse gifski \
- && installGithub.r rundel/checklist rundel/parsermd
+ && installGithub.r rundel/checklist
 
 RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb \
     && DEBIAN_FRONTEND=noninteractive apt install ./quarto-1.3.450-linux-amd64.deb \
